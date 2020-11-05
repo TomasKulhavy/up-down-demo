@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import UpDown, {UpDownInner} from "./components/UpDown";
 
 function App() {
+  const [a, setA] = useState(5);
+  const [b, setB] = useState(5);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <UpDown value={a} setValue={setA} min={0} max={10} />
+      <UpDown value={b} setValue={setB} />
+      <p>{a + b}</p>
+    </>
+    //<UpDownInner><strong>X</strong></UpDownInner>
   );
 }
 

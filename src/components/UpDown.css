@@ -1,0 +1,5 @@
+.updown span {
+    display: inline-block;
+    width: 2em;
+    text-align: center;
+  }
